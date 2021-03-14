@@ -1,0 +1,178 @@
+@import "mixins";
+
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: var(--clr-light);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(#000, .2);
+    text-align: center;
+    cursor: pointer;
+
+    /*@include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }*/
+
+    @include respond(phone) {
+      height: 3em;
+      width: 3em;
+    }
+  }
+
+  &__background {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-image: radial-gradient(ellipse farthest-side at 45px 45px , #e1f4f5, var(--clr-accent));
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    /*@include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }*/
+
+    @include respond(phone) {
+      height: 2em;
+      width: 2em;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: var(--clr-light);
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(115deg, transparent 0%, transparent 50%, var(--clr-light) 50%);
+      background-size: 220%;
+      transition: all .4s;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: var(--clr-accent);
+      transform: translateX(1rem);
+    }
+  }
+
+
+  // FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  // ICON
+  &__icon {
+    position: relative;
+    margin-top: 2rem;
+
+    @include respond(phone) {
+      margin-top: 1.5em;
+    }
+
+    &,
+    &::before,
+    &::after {
+      width: 1.8rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block;
+
+      @include respond(phone) {
+        width: 1.5em;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before { top: -.5rem; }
+    &::after { top: .5rem; }
+  }
+
+  &__button:hover &__icon::before {
+    top: -.6rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: .6rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
