@@ -13,3 +13,10 @@ new Typed(".typing", {
     backSpeed: 60,
 });
 
+function downloadCV(fileUrl, fileName) {
+    let a = document.createElement("a");
+    a.href = fileUrl;
+    a.setAttribute("download", fileName);
+    a.click();
+}
+
