@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borja Alonso Melero | Portfolio</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!--<div class="logo">
+            <img src="img/default-monochrome-black.svg" alt="">
+        </div>-->
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#home" class="navigation__link"><span>01</span>Home</a></li>
+                    <li class="navigation__item"><a href="#services" class="navigation__link"><span>02</span>My services</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link"><span>03</span>About me</a></li>
+                    <li class="navigation__item"><a href="#work" class="navigation__link"><span>04</span>My work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <br><strong class="typing"></strong>
+        </h1>
+
+        <p class="section__subtitle section__subtitle--intro">software engineer</p>
+        <img src="img/dev-borja-01.png" alt="" class="intro__img">
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Web development</h3>
+                <p>
+                    Advanced knowledge in web technologies, such as HTML, CSS and JavaScript. I have also worked with
+                    several frameworks (Angular, Bootstrap, Ionic). From scratch to launch. Always in the latest fashion.
+                    Landing pages, portfolios, blogs... Whatever
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>App development</h3>
+                <p>
+                    Self-taught in this field. Multiplatform. Worked with Ionic Framework since 2017. Do you want to make the idea of
+                    your dreams come true? Just tell me what you need.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>E-Commerce</h3>
+                <p>
+                    Do you want to sell your products? I will make it possible creating an awesome e-commerce website
+                    where users can buy the best products of your selection. Building with top technologies, such as
+                    Shopify and Webflow
+                </p>
+            </div>
+        </div>
+
+        <a href="#work" class="btn">My work</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who am I</h2>
+        <p class="section__subtitle section__subtitle--about">Software developer based out of Valencia</p>
+
+        <div class="about-me__body">
+            <p>
+                25 years old. Born in Valencia, Spain. Sports and technology enthusiast. Windsurf lover.
+            </p>
+            <p>
+                Passionate about everything I do. Always giving my best. Serious when I have to be. Willing to learn new
+                things everyday. What is the meaning of life if not? Accustomed to teamwork. Responsible person.
+                Demanding with myself. Always looking for perfection. Smart worker. Ambitious guy.
+            </p>
+        </div>
+
+        <img src="img/dev-borja-02.jpg" alt="" class="about-me__img">
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+        <div class="portfolio">
+            <a href="https://endulzados.com/" class="portfolio__item" target="_blank">
+                <img src="img/endulzados.jpg" alt="" class="portfolio__item--image">
+                <p class="portfolio__item--description">Endulzados</p>
+            </a>
+
+            <a href="https://journify.com/" class="portfolio__item" target="_blank">
+                <img src="img/logo-journify.jpg" alt="" class="portfolio__item--image">
+                <p class="portfolio__item--description">Journify</p>
+            </a>
+
+            <a href="https://aravingenieria.com/" class="portfolio__item" target="_blank">
+                <img src="img/logo-arav-i.jpeg" alt="" class="portfolio__item--image">
+                <p class="portfolio__item--description">ARAV Ingenieria</p>
+            </a>
+
+            <a href="https://dashboard.journify.com" class="portfolio__item" target="_blank">
+                <img src="img/portfolio-01.jpg" alt="" class="portfolio__item--image">
+                <p class="portfolio__item--description">Journify Dashboard</p>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="mailto:borjalonso95@gmail.com?subject=Contact" target="_blank" class="footer__link">borjalonso95@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.instagram.com/borjalom" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com/borjalo6" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/borja-alonso-melero-391945120/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
